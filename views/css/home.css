@@ -1,0 +1,443 @@
+body{
+    background-color: #e3e7eaf5: url(.jpg) no-repeat center fixed;
+    background-size: cover;
+    list-style: none;
+
+font-size: 150%;
+
+}
+
+
+header{
+
+    color:#1f3090;
+    width: 1365px;
+    height: 35px;
+    background-color:#e3e7eaf5;
+    opacity: .90;
+    padding: 0 20px; 
+    box-shadow: 0px 0px 3px #848484;
+    border-radius : 0rem;
+   padding: 0px 20px;
+    position: relative;
+    z-index: 10;
+    -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   box-shadow: 0px 0px 8px #35459b;
+}
+
+b, strong {
+    font-weight: bolder;
+    color: #1f3090;
+}
+
+.datefecha{
+
+    margin-left:1009px;
+
+}
+.caja-campo{
+
+margin-left:886px;
+
+}
+
+.navegacion{
+  margin-top: 10px;
+  margin: 0;
+  padding: 0;
+ 
+  
+}
+.navegacion ul{
+  list-style: none;
+
+}
+
+
+ul {
+
+    padding-left: 88%;
+    list-style:none;
+    margin-top:-45px;
+}
+
+.menus > li{
+  position: relative;
+  display: inline-block;
+  list-style:none;
+
+
+
+}
+
+.menus > li > a{
+  display: block;
+  padding: 0px 10px;
+  color:#1f3090; 
+  font-family:none;
+  
+
+}
+
+.menus li a:hover{
+  text-decoration: underline;
+  color: #1f3090;
+  transition: all .3s;
+}
+
+/* Submenu*/
+
+.submenus{
+  margin: 0;
+  padding: 1rem;
+  position: absolute;
+  background: #e7eaed;
+  visibility: hidden;
+  opacity: .50;
+  transition: opacity 1.5s;
+  border-radius: 0.7rem;
+}
+
+.submenus li a{
+  display: block;
+  padding left: 2px;
+  color: #1f3090;
+  font-family: none;
+
+  
+
+}
+
+
+.menus li:hover .submenus{
+  visibility: visible;
+  opacity: 1;
+
+  
+  
+}
+
+
+
+
+
+.modal-dialog {
+   
+     margin: 1rem; 
+     pointer-events: none; 
+
+}
+.main-section{
+    position: absolute;
+    margin-left: -5%;
+    float: left;  
+
+}
+ .cajatr{
+ 
+    margin-left:809px;
+   
+
+}
+.cajatr2{
+ 
+    margin-left:788px;
+   
+
+}
+
+
+
+
+.modal-content {
+    color: #1f3090;
+    width: 200px;
+    height: 623px;
+    background-color: #e3e7eaf5;
+    /* opacity: 0.9; */
+    padding: 0 20px;
+    box-shadow: 0px 0px 3px #848484;
+    border-radius: 0.3rem;
+    margin-top: -17px;
+   
+  }
+
+.tam {
+  
+  font-size: 12.0px
+
+   }
+
+.main-sectionbox {
+    margin-top: -15px;
+    margin-left: 176px;
+    color: #1f3090;
+    width: 1174px;
+    height: 620px;
+    background-color: #e3e7eaf5;
+    opacity: .90;
+    padding: 0 20px;
+    box-shadow: 0px 0px 3px #848484;
+    pointer-events: auto;
+    font-size: 70%;
+    overflow: auto;
+    position: absolute;
+}
+
+.banner {
+    border-radius: 8px;
+    width: 1071px;
+    height: 407px;
+    box-shadow: 1px 1px 18px #1f3090;
+    margin: auto;
+    background-size: 100% 100%;
+    animation: banner 10s infinite;
+
+
+
+}
+
+@keyframes banner{
+
+0%,30%{
+
+  background-image: url(../img/confeccion.jpg);
+ }
+
+35%,65%{
+
+  background-image: url(../img/imagen1.jpg);
+ }
+75%,100%{
+
+  background-image: url(../img/imagen2.jpg);
+ }
+
+
+
+}
+
+.main-sectionbox::-webkit-scrollbar {
+  width: 10px;
+
+}
+
+.main-sectionbox::-webkit-scrollbar-thumb {
+  background: #1f3090;
+  border-radius: 10px;
+  border-right: 10px;
+}
+
+.tablet td, .tablet th {
+    padding: 0.4em;
+    text-align: left;
+    width: 16%;
+
+
+  
+}
+
+.table {
+  
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.table-dark {
+    color: #35459b;
+    background-color:#e7eaed;
+    text-align: left;
+}
+.table-dark td, .table-dark th, .table-dark thead th {
+    border-color: #e7eaed;
+}
+
+.ruta {
+    
+       position: absolute;
+    margin-top: 10px;
+    margin-left: 1%;
+  
+    
+}
+.noti {
+    
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 66%;
+  
+    
+}
+.color {
+    color: red;
+  
+    
+}
+  
+
+.caja {
+  
+    position: relative;
+    margin-left: 85%;
+    font-size: 153%;
+    
+}
+  
+
+
+.form-control {
+
+
+    display: block;
+    width: 50%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #1f3090;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    
+}
+
+  .form-main {
+    text-align: left;
+    height: 42px width: 30%;
+    display: inline-block;
+    
+    background-clip: padding-box;
+    border: 1px solid #5f5f5f;
+    border-radius: .25rem;
+    font-size: 1rem;
+    font-weight: 400px;
+    margin: auto;
+    font-size: 15px;
+    border: 0.1;
+    padding-left: 20px;
+    margin-bottom: 1rem;
+  font-family: inherit;
+    
+    }
+
+
+.btn-2 {
+  box-shadow: 1px 1px 9px #35459b;
+    padding: 12px 13px;
+    background: #343a40;
+    color: white;
+    border-radius: .25rem;
+    text-align: center;
+    border-color:#35459b ;
+}
+ .btn-2l{
+    
+    padding: 6px 2px;
+    background: #007bff;
+    color: white;
+    border-radius: .25rem;
+    text-align: center;
+    margin-left: 10%
+}
+
+.middle {
+    position: absolute;
+    top: 31%;
+    left: 50%;
+    transform: translate(-51%,-31%);
+    text-align: left;
+}
+.menu{
+  width: 182px;
+  border-radius: 7px;
+  overflow: hidden;
+}
+.noti{
+  position: absolute;
+    margin-top: -51px;
+    margin-left: -25%;
+}
+
+
+.notianch{
+ width: 160px;
+}
+
+
+
+.item{
+  border-top: 1px solid #35459b;
+  overflow: hidden;
+}
+.btn{
+  display: block;
+  padding: 2px 4px;
+  background:#e4e7ea;
+  color:#35459b;
+  position: relative;
+  text-align: left;
+  border-block-end-color:#35459b;
+}
+
+ 
+ .btnb{
+  
+  padding: 9px 7px;
+  background: #007bff;
+  color: white;
+  position: relative;
+  text-align: left;
+  border-radius: 5px;
+
+}
+.btn:before{
+  
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background:#007bff;
+  left: 20px;
+  bottom: -7px;
+  transform: rotate(45deg);
+}
+.btn i{
+  margin-right: 10px;
+}
+.smenu{
+  background:#e4e7ea;
+  overflow: hidden;
+  transition: max-height 0.3s;
+  max-height: 0;
+}
+.smenu a {
+    display: block;
+    padding: 8px 23px;
+    color:#35459b;
+    font-size: 14px;
+    margin: 0px -8px;
+    position: relative;
+}
+
+.smenu a:before {
+    border-radius: 8px;
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background: #35459b;
+    left: 8px;
+    top: 0px;
+    transition: 0.3s;
+    opacity: 0;
+    box-shadow: 1px 1px 10px #35459b;
+}
+.smenu a:hover:before{
+  opacity: 1;
+}
+.item:target .smenu{
+  max-height: 20em;
+}

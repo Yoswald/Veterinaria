@@ -1,0 +1,82 @@
+body{
+    background: url(../img/confeccion.jpg) no-repeat center center fixed;
+    background-size: cover;
+
+}
+
+.main-section{
+    margin:0 auto;
+    margin-top:25%;
+    padding: 0;
+}
+
+.modal-content{
+    background-color: #e3e7eaf5;
+    opacity: .85;
+    padding: 0 20px;
+    box-shadow: 0px 0px 3px #848484;
+}
+
+
+
+
+.forgot{
+    color: #1f3090;
+   
+
+}
+
+.user-img img{
+    height: 82px;
+    
+    border-radius: 50%;
+    margin-top: 10px;
+
+
+}
+.form-group input{
+    height: 42px;
+    font-size: 18px;
+    border:0;
+    padding-left: 54px;
+    border-radius: 5px;
+}
+
+.form-group::before{
+    font-family: "Font Awesome\ 5 Free";
+    position: absolute;
+    left: 28px;
+    font-size: 22px;
+    padding-top:4px;
+}
+
+.form-group#user-group::before{
+    content: "\f007";
+}
+
+.form-group#contrasena-group::before{
+    content: "\f023";
+}
+
+button{
+    width: 60%;
+    margin: 5px 0 25px;
+
+}
+.btn-2 {
+    padding: 12px 8px;
+    background: #343a40;
+    color: white;
+    border-radius: .25rem;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.forgot{
+    padding: 5px 0;
+
+}
+
+.forgot a{
+     color:#1f3090 ;
+}

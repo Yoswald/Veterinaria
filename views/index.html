@@ -1,0 +1,380 @@
+<?php 
+include ('controladores/controladorprivilegioshome.php');
+
+ 
+if(!isset($_SESSION['logueado'])) {
+
+  header("location:index.php");
+
+  exit;
+}
+?>
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>bootstrap sidebar</title>
+  <link rel='stylesheet' href='bootstrap-3.3.7-dist/css/bootstrap.min.css'>
+<!-- <link rel='stylesheet' href='fontawesome-free-5.11.2-web/css/fontawesome.min.css'> -->
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="fontawesome-free-5.11.2-web/css/solid.css">
+     <script src="fontawesome-free-5.11.2-web/js/all.js"></script>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<nav class="mnb navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <i class="ic fa fa-bars"></i>
+      </button>
+      <div style="padding: 15px 0;">
+         <a href="#" id="msbo"><i class="ic fa fa-bars"> </i></a>
+         <i class="fas fa-home"></i> Inicio  
+        
+
+
+      </div>
+
+    </div>
+
+   
+
+
+    <div id="navbar" class="navbar-collapse collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+ 
+
+        <li class="dropdown">
+<table class="position">   
+          	 <th>
+
+ <script> 
+
+var mydate=new Date(); 
+var year=mydate.getYear(); 
+if (year < 1000) 
+year+=1900; 
+var day=mydate.getDay(); 
+var month=mydate.getMonth()+1; 
+if (month<10) 
+month="0"+month; 
+var daym=mydate.getDate(); 
+if (daym<10) 
+daym="0"+daym; 
+document.write("<small><font face='Arial'><b>"+daym+"/"+month+"/"+year+"</b></font></small>") 
+  
+</script></th>
+
+<th>
+<script type="text/javascript">
+function startTime(){
+today=new Date();
+h=today.getHours();
+m=today.getMinutes();
+s=today.getSeconds();
+m=checkTime(m);
+s=checkTime(s);
+document.getElementById('reloj').innerHTML=h+":"+m;
+t=setTimeout('startTime()',500);}
+function checkTime(i)
+{if (i<10) {i="0" + i;}return i;}
+window.onload=function(){startTime();}
+</script>
+<div id="reloj" style="font-size:19px; padding: 8px;"></div>
+</th> 
+
+
+</table>
+
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">  
+
+      Usuario <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Registrar</a></li>
+            <li><a href="#">Ayuda</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Salir</a></li>
+          </ul>
+        </li>
+     
+     
+    </div>
+  </div>
+</nav>
+<!--msb: main sidebar-->
+<div class="msb" id="msb">
+		<nav class="navbar navbar-default" role="navigation">
+			<!-- Brand and toggle get grouped for better mobile display -->
+
+			
+
+			<div class="navbar-header">
+				<div class="brand-wrapper">
+					<!-- Brand -->
+					<div class="brand-name-wrapper">
+						<a class="navbar-brand" href="#">
+							SAITAMA
+						</a>
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- Main Menu -->
+			<div class="side-menu-container">
+				<ul class="nav navbar-nav">
+
+					
+						<li><a href="#"><i class="fas fa-home"></i> Inicio</a></li>
+
+					<!-- Dropdown-->
+					<li class="panel panel-default" id="dropdown">
+						<a data-toggle="collapse" href="#dropdown-lvl1">
+							<i class="fas fa-user-edit"></i> Registrar<span class="caret"></span>
+            </a>
+						<!-- Dropdown level 1 -->
+						<div id="dropdown-lvl1" class="panel-collapse collapse">
+							<div class="panel-body">
+								<ul class="nav navbar-nav">
+									<li><a href="controladores/controladorcliente.php?operacion=registrar">Cliente</a></li>
+									<li><a href="controladores/controladorproveedor.php?operacion=registrar">Proveedor</a></li>
+									<li> <a href="controladores/controladorincidencias.php?operacion=agregar">Incidencias</a></li>
+									<li><a href="controladores/controladorcostologos.php?operacion=index">Precio</a></li>
+
+									
+								
+										</a>
+										
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<!-- Dropdown-->
+					<li class="panel panel-default" id="dropdown">
+						<a data-toggle="collapse" href="#dropdown-lvl2">
+							<i class="fas fa-cash-register"></i> Compra<span class="caret"></span>
+                           </a>
+						<!-- Dropdown 1evel 2 -->
+						<div id="dropdown-lvl2" class="panel-collapse collapse">
+							<div class="panel-body">
+								<ul class="nav navbar-nav">
+									<li><a href="controladores/controladorcomprahi.php?operacion=registrar">Hilo</a></li>
+									<li><a href="controladores/controladorcomprapin.php?operacion=registrar">Pintura</a></li>
+									<li> <a href="controladores/controladorotros.php?operacion=registrar">Otros</a></li>
+									
+								
+										</a>
+										
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<!-- Dropdown-->
+					<li class="panel panel-default" id="dropdown">
+						<a data-toggle="collapse" href="#dropdown-lvl3">
+							<i class="fas fa-clipboard-list"></i> Solicitud de venta <span class="caret"></span>
+                           </a>
+						<!-- Dropdown 1evel 3 -->
+						<div id="dropdown-lvl3" class="panel-collapse collapse">
+							<div class="panel-body">
+								<ul class="nav navbar-nav">
+									<li><a href="controladores/controladorservihilos.php?operacion=pedido_venta">Bordado</a></li>
+									<li><a href="controladores/controladorservipintu.php?operacion=pedido_venta">Estampado</a></li>
+				
+										</a>
+										
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<!-- Dropdown-->
+					<li class="panel panel-default" id="dropdown">
+						<a data-toggle="collapse" href="#dropdown-lvl4">
+							<i class="fas fa-exclamation"></i> Venta solicitada <span class="caret"></span>
+                           </a>
+						<!-- Dropdown 1evel 4 -->
+						<div id="dropdown-lvl4" class="panel-collapse collapse">
+							<div class="panel-body">
+								<ul class="nav navbar-nav">
+									<li><a href="controladores/controladorservihilos.php?operacion=en_produccion">Bordados</a></li>
+									<li><a href="controladores/controladorservipintu.php?operacion=en_produccion">Estampado</a></li>
+								
+										</a>
+										
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<!-- Dropdown-->
+					<li class="panel panel-default" id="dropdown">
+						<a data-toggle="collapse" href="#dropdown-lvl5">
+							<i class="fas fa-exclamation"></i> Venta en producción <span class="caret"></span>
+                           </a>
+						<!-- Dropdown 1evel 5 -->
+						<div id="dropdown-lvl5" class="panel-collapse collapse">
+							<div class="panel-body">
+								<ul class="nav navbar-nav">
+									<li><a href="controladores/controladorservihilos.php?operacion=solicitud_pendiente">Bordado</a></li>
+									<li><a href="controladores/controladorservipintu.php?operacion=solicitud_pendiente">Estampado</a></li>
+					
+
+									
+								
+										</a>
+										
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<!-- Dropdown-->
+					<li class="panel panel-default" id="dropdown">
+						<a data-toggle="collapse" href="#dropdown-lvl6">
+						<i class="fas fa-check-square"></i> Ventas realizadas <span class="caret"></span>
+                           </a>
+						<!-- Dropdown 1evel 6 -->
+						<div id="dropdown-lvl6" class="panel-collapse collapse">
+							<div class="panel-body">
+								<ul class="nav navbar-nav">
+									<li><a href="controladores/controladorservihilos.php?operacion=venta_completa">Bordados</a></li>
+									<li><a href="controladores/controladorservipintu.php?operacion=venta_completa">Estampados</a></li>
+									
+								
+										</a>
+										
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<!-- Dropdown-->
+					<li class="panel panel-default" id="dropdown">
+						<a data-toggle="collapse" href="#dropdown-lvl7">
+						<i class="fas fa-cash-register"></i> Finanzas <span class="caret"></span>
+                           </a>
+						<!-- Dropdown 1evel 7 -->
+						<div id="dropdown-lvl7" class="panel-collapse collapse">
+							<div class="panel-body">
+								<ul class="nav navbar-nav">
+									<li><a href="controladores/controladorfinanza.php?operacion=ir_finanza">Gananancia total</a></li>
+									
+									
+								
+										</a>
+										
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<!-- Dropdown-->
+					<li class="panel panel-default" id="dropdown">
+						<a data-toggle="collapse" href="#dropdown-lvl8">
+						<i class="fas fa-warehouse"></i> Almacén <span class="caret"></span>
+                           </a>
+						<!-- Dropdown 1evel 8 -->
+						<div id="dropdown-lvl8" class="panel-collapse collapse">
+							<div class="panel-body">
+								<ul class="nav navbar-nav">
+									<li><a href="controladores/controladoralmacen.php?operacion=index">Hilos</a></li>
+									<li><a href="controladores/controladoralmacenpin.php?operacion=index">Pinturas</a></li>
+									
+								
+										</a>
+										
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<!-- Dropdown-->
+					<li class="panel panel-default" id="dropdown">
+						<a data-toggle="collapse" href="#dropdown-lvl9">
+						<i class="fas fa-list"></i> Listas <span class="caret"></span>
+                           </a>
+						<!-- Dropdown 1evel 9 -->
+						<div id="dropdown-lvl9" class="panel-collapse collapse">
+							<div class="panel-body">
+								<ul class="nav navbar-nav">
+	                             <li> <a href="controladores/controladorcliente.php?operacion=index">Lista de Clientes</a></li>
+                                  <li> <a href="controladores/controladorcomprahi.php?operacion=index">Lista de Hilos</a></li>
+                                 <li> <a href="controladores/controladorincidencias.php?operacion=index">Lista de Incidencias</a></li>
+                                  <li> <a href="controladores/controladorcomprapin.php?operacion=index">Lista de Pintura</a></li>
+                                  <li> <a href="controladores/controladorproveedor.php?operacion=index">Lista de Proveedores</a></li>
+                                  <li> <a href="controladores/controladorotros.php?operacion=index">Lista de compras Otros</a></li>
+                                  <li> <?php if (controladorprivilegios::buscar_acceso('mantenimiento','index')>0){ ?>
+                                  <li> <a href="controladores/controladorusuario.php?operacion=index">Lista de Usuarios</a></li>
+									                       
+									
+								
+										</a>
+										
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<!-- Dropdown-->
+					<li class="panel panel-default" id="dropdown">
+						<a data-toggle="collapse" href="#dropdown-lvl10">
+						<i class="fas fa-cog"></i> Mantenimiento <span class="caret"></span>
+                           </a>
+						<!-- Dropdown 1evel 8 -->
+						<div id="dropdown-lvl10" class="panel-collapse collapse">
+							<div class="panel-body">
+								<ul class="nav navbar-nav">
+									<li><a href="vistas/backupPHP/descargar.php">Respaldar Base de Datos</a></li>
+									<li><a href="controladores/controladorusuario.php?operacion=asignar_registrar">Asignar privilegios</a></li>
+									
+								
+										</a>
+										
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					
+				</ul>
+			</div><!-- /.navbar-collapse -->
+			   <?php } ?>
+		</nav>  
+</div>
+<!--main content wrapper-->
+<div class="mcw">
+  <!--navigation here-->
+  <!--main content view-->
+  <div class="cv">
+    <div>
+     <div class="inbox">
+       <div class="inbox-sb">
+         
+       </div>
+      
+           <div class="col-md-10">
+
+           	  <h1>Bienvenido</h1>
+             
+           </div>
+         </div>
+       </div>
+     </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='jquery-3.1.1.min.js'></script>
+<script src='bootstrap-3.3.7-dist/js/bootstrap.min.js'></script>
+<script  src="script.js"></script>
+
+</body>
+</html>
